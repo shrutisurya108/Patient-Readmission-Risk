@@ -1,0 +1,35 @@
+# config/config.yaml
+paths:
+  raw_data: "data/raw/"
+  processed_data: "data/processed/"
+  logs: "logs/"
+  reports: "reports/"
+  figures: "reports/figures/"
+  clinical_report: "reports/clinical/"
+
+data:
+  dataset_name: "diabetes_readmission"
+  target_column: "readmitted"
+  test_size: 0.2
+  random_state: 42
+
+model:
+  name: "xgboost"
+  n_estimators: 400
+  max_depth: 5
+  learning_rate: 0.05
+  scale_pos_weight: 8        # ratio of negatives:positives (90409/11357 ≈ 8)
+  subsample: 0.8
+  colsample_bytree: 0.8
+  min_child_weight: 5
+  classification_threshold: 0.35
+
+smote:
+  enabled: false             # disabled — using scale_pos_weight instead
+  sampling_strategy: "auto"
+  k_neighbors: 5
+
+logging:
+  level: "INFO"
+  max_bytes: 10485760   # 10MB
+  backup_count: 5

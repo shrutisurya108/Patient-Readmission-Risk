@@ -1,0 +1,29 @@
+=================================================================
+HYPOTHESIS TESTING REPORT — Patient Readmission Risk
+=================================================================
+Total: 101,766 | Readmitted <30d: 11,357 | Not: 90,409
+
+─────────────────────────────────────────────────────────────────
+CHI-SQUARE TESTS (categorical vs readmission)
+─────────────────────────────────────────────────────────────────
+Insulin medication status                χ²=   190.86  p=3.98e-41  df=3  *** SIGNIFICANT
+Medication change flag                   χ²=    38.60  p=5.21e-10  df=1  *** SIGNIFICANT
+Diabetes medication prescribed           χ²=    74.67  p=5.57e-18  df=1  *** SIGNIFICANT
+Age group                                χ²=   116.61  p=6.60e-21  df=9  *** SIGNIFICANT
+Number of diagnoses (binned)             χ²=   259.10  p=1.65e-46  df=15  *** SIGNIFICANT
+
+─────────────────────────────────────────────────────────────────
+INDEPENDENT SAMPLES T-TESTS (continuous vs readmission)
+─────────────────────────────────────────────────────────────────
+Time in hospital (days)                  t= 13.926  p=8.55e-44  Δmean=+0.419  *** SIGNIFICANT
+Number of medications                    t= 12.302  p=1.32e-34  Δmean=+0.992  *** SIGNIFICANT
+Number of lab procedures                 t=  6.613  p=3.89e-11  Δmean=+1.272  *** SIGNIFICANT
+Number of diagnoses                      t= 17.027  p=2.07e-64  Δmean=+0.304  *** SIGNIFICANT
+Prior inpatient visits                   t= 35.384  p=2.76e-261  Δmean=+0.662  *** SIGNIFICANT
+Prior emergency visits                   t= 13.629  p=5.39e-42  Δmean=+0.180  *** SIGNIFICANT
+
+─────────────────────────────────────────────────────────────────
+SUMMARY
+─────────────────────────────────────────────────────────────────
+All p<0.05 features are statistically validated risk factors.
+=================================================================
