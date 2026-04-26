@@ -9,7 +9,7 @@
 ## 🌐 Live Demo
 **[▶ Try the app on Hugging Face Spaces](https://huggingface.co/spaces/harshith68/Patient-Readmission-Risk)**  
 Enter patient clinical parameters and get an instant 30-day readmission
-risk score with a SHAP waterfall explanation   No setup required.
+risk score with a SHAP waterfall explanation. No setup required.
 
 ---
 
